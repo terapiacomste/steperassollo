@@ -17,7 +17,7 @@ const {
 <html lang="pt-BR" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
@@ -39,9 +39,9 @@ const {
       });
     </script>
   </head>
-  <body class="font-sans antialiased text-neutral-800 bg-neutral-50">
+  <body class="font-sans antialiased text-neutral-800 bg-neutral-50 min-h-screen w-full overflow-x-hidden">
     <Header />
-    <main>
+    <main class="w-full overflow-x-hidden">
       <slot />
     </main>
     <Footer />
@@ -51,11 +51,18 @@ const {
 <style is:global>
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
   }
   
   body {
     margin: 0;
-    overflow-x: hidden;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: inherit;
   }
   
   h1, h2, h3, h4, h5, h6 {
