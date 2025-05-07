@@ -1,0 +1,73 @@
+---
+const differentials = [
+  "Base científica e eficácia comprovada",
+  "Foco na solução e no presente",
+  "Estratégias práticas para o dia a dia",
+  "Processo estruturado e direcionado"
+];
+
+const benefits = [
+  "Controle de pensamentos catastróficos",
+  "Ressignificação de crenças negativas",
+  "Fortalecimento da autoconfiança",
+  "Manejo de sintomas e estratégias práticas"
+];
+---
+
+<section id="tcc" class="py-20 bg-gradient-to-b from-white to-primary-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">O que é a Terapia Cognitivo-Comportamental (TCC)?</h2>
+      <p class="text-lg text-neutral-700">
+        A TCC é uma abordagem baseada na relação entre pensamentos, emoções e comportamentos. Ela ajuda a identificar padrões disfuncionais e a desenvolver estratégias para lidar melhor com desafios emocionais.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- How it works -->
+      <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold text-primary-700 mb-4">Como funciona?</h3>
+        <p class="text-neutral-700 mb-6">
+          A TCC é estruturada, focada no presente e orientada para soluções. Durante as sessões, trabalhamos para reconhecer pensamentos automáticos negativos, reformulá-los e adotar comportamentos mais saudáveis. A terapia é ativa, com técnicas e exercícios práticos que auxiliam na mudança.
+        </p>
+        
+        <div class="mt-6">
+          <h4 class="text-xl font-medium text-primary-600 mb-3">Diferenciais da TCC</h4>
+          <ul class="space-y-2">
+            {differentials.map(item => (
+              <li class="flex items-start">
+                <span class="text-primary-500 mr-2">✓</span>
+                <span class="text-neutral-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      
+      <!-- How it helps -->
+      <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-primary-700 mb-4">Como pode ajudar?</h3>
+        <p class="text-neutral-700 mb-6">
+          A TCC tem eficácia comprovada em diversas questões emocionais e comportamentais. Alguns dos benefícios incluem:
+        </p>
+        
+        <div class="space-y-4">
+          {benefits.map(benefit => (
+            <div class="p-4 bg-primary-50 rounded-md">
+              <p class="text-neutral-700">{benefit}</p>
+            </div>
+          ))}
+        </div>
+        
+        <div class="mt-8 text-center">
+          <a 
+            href="#contato" 
+            class="inline-block px-6 py-3 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors duration-300 shadow-sm"
+          >
+            Quer saber mais? Entre em contato
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

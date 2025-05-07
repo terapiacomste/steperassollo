@@ -1,0 +1,76 @@
+---
+const reviews = [
+  {
+    author: "Barbara Bocicovar",
+    rating: 5,
+    text: "Afirmo que a Stephanie é uma excelente Profissional, super competente e ética. Atenciosa, acolhedora e sempre busca proporcionar um ambiente seguro e confortável para seus pacientes. Recomendo fortemente quem está a procura de uma profissional dedicada e capacitada.",
+    date: "há 6 meses"
+  },
+  {
+    author: "Estevão Lopes",
+    rating: 5,
+    text: "Profissional incrível ficamos quase 1 ano em sessão e me ajudou muito mesmo, indico de olhos fechados.",
+    date: "há 5 meses"
+  },
+  {
+    author: "Nanda Lima",
+    rating: 5,
+    text: "Eu amei passar com a Dra Stephanie, ela é ótima e super acolhedora.",
+    date: "há 6 meses"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">O que dizem sobre mim</h2>
+      <p class="text-lg text-neutral-700">
+        Confira alguns depoimentos de pessoas que já passaram por um processo terapêutico comigo.
+      </p>
+      <div class="mt-4">
+        <a 
+          href="https://g.co/kgs/cithVYY" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors duration-300"
+        >
+          Ver todas as avaliações no Google
+          <span class="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {reviews.map((review, index) => (
+        <div 
+          class="bg-white p-8 rounded-lg shadow-md border border-neutral-100"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="flex items-center mb-4">
+            {Array.from({ length: review.rating }).map(() => (
+              <span class="text-yellow-400 text-xl">★</span>
+            ))}
+          </div>
+          <p class="text-neutral-700 mb-4 italic">"{review.text}"</p>
+          <div class="mt-4">
+            <p class="font-medium text-primary-700">{review.author}</p>
+            <p class="text-sm text-neutral-500">{review.date}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-12 text-center" data-aos="fade-up">
+      <div class="inline-flex items-center justify-center space-x-2 text-neutral-600">
+        <img 
+          src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" 
+          alt="Google" 
+          class="h-6 object-contain"
+        />
+        <span class="text-lg">Avaliação média: 5.0</span>
+      </div>
+    </div>
+  </div>
+</section>

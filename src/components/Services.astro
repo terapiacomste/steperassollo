@@ -1,0 +1,62 @@
+---
+const services = [
+  {
+    title: "Psicoterapia Individual Online",
+    description: "Atendimento personalizado via videoconferência, com a mesma qualidade de um atendimento presencial, mas com a comodidade de ser realizado onde você estiver.",
+    icon: "🖥️"
+  },
+  {
+    title: "Terapia para Ansiedade",
+    description: "Abordagem especializada para diferentes tipos de ansiedade, incluindo ansiedade generalizada, fobias, pânico e ansiedade social.",
+    icon: "😌"
+  },
+  {
+    title: "Terapia para Depressão",
+    description: "Suporte terapêutico para quadros depressivos, ajudando a recuperar a motivação, prazer nas atividades e uma visão mais positiva da vida.",
+    icon: "🌱"
+  },
+  {
+    title: "Suporte para Questões Específicas",
+    description: "Acompanhamento especializado para TDAH, TOC, TEA, questões de autoestima, relacionamentos, traumas e outras dificuldades emocionais.",
+    icon: "🧩"
+  }
+];
+---
+
+<section id="servicos" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">Serviços</h2>
+      <p class="text-lg text-neutral-700">
+        Ofereço atendimento psicológico online baseado na Terapia Cognitivo-Comportamental, adaptado às suas necessidades específicas.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {services.map((service, index) => (
+        <div 
+          class="p-8 rounded-lg bg-gradient-to-br from-primary-50 to-secondary-50 border border-primary-100 hover:shadow-md transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold text-primary-700 mb-3">{service.title}</h3>
+          <p class="text-neutral-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="max-w-3xl mx-auto mt-16 text-center" data-aos="fade-up">
+      <h3 class="text-2xl font-semibold text-primary-700 mb-4">Pronto para iniciar sua jornada terapêutica?</h3>
+      <p class="text-lg text-neutral-700 mb-8">
+        Cada pessoa é única, assim como sua experiência terapêutica. Entre em contato para conversarmos sobre como posso ajudar no seu caso específico.
+      </p>
+      <a 
+        href="#contato" 
+        class="inline-block px-8 py-4 bg-primary-600 text-white text-lg rounded-md hover:bg-primary-700 transition-colors duration-300 shadow-md"
+      >
+        Agende sua primeira sessão
+      </a>
+    </div>
+  </div>
+</section>

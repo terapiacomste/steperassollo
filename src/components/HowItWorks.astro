@@ -1,0 +1,59 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Primeira sessão",
+    description: "Na primeira sessão, realizamos uma avaliação inicial para entender suas necessidades e objetivos, estabelecendo as bases para o trabalho terapêutico."
+  },
+  {
+    number: "02",
+    title: "Plano estruturado",
+    description: "Desenvolvemos juntos um plano terapêutico personalizado, com técnicas baseadas na TCC para abordar suas questões específicas."
+  },
+  {
+    number: "03",
+    title: "Sessões semanais",
+    description: "As sessões acontecem semanalmente, com duração de aproximadamente 50 minutos, criando uma rotina que facilita o progresso terapêutico."
+  },
+  {
+    number: "04",
+    title: "Estratégias práticas",
+    description: "O processo é ativo e focado em soluções, com estratégias que você pode aplicar no seu dia a dia para promover mudanças reais."
+  }
+];
+---
+
+<section id="como-funciona" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary-800 mb-6">Como Funciona a Terapia?</h2>
+      <p class="text-lg text-neutral-700">
+        A psicoterapia é um espaço seguro para você falar sobre suas dificuldades e encontrar novas formas de lidar com elas. Conheça como funciona o processo terapêutico:
+      </p>
+    </div>
+    
+    <div class="space-y-8 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, index) => (
+        <div 
+          class="bg-neutral-50 p-8 rounded-lg border border-neutral-200 hover:border-primary-300 transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="text-5xl font-bold text-primary-200 mb-4">{step.number}</div>
+          <h3 class="text-xl font-semibold text-primary-700 mb-3">{step.title}</h3>
+          <p class="text-neutral-600">{step.description}</p>
+        </div>
+      ))}
+    </div>
+    
+    <div class="max-w-3xl mx-auto mt-16 p-8 bg-primary-50 rounded-lg border border-primary-100" data-aos="fade-up">
+      <h3 class="text-xl font-semibold text-primary-800 mb-4">Por que buscar ajuda profissional?</h3>
+      <p class="text-neutral-700 mb-4">
+        Assim como cuidamos da nossa saúde física, a saúde mental também precisa de atenção. Buscar ajuda profissional é um passo importante para o autoconhecimento e para desenvolver estratégias adequadas para lidar com os desafios emocionais.
+      </p>
+      <p class="text-neutral-700">
+        Na terapia, você encontra um espaço seguro para expressar seus sentimentos e pensamentos sem julgamentos, recebendo orientação profissional baseada em evidências científicas.
+      </p>
+    </div>
+  </div>
+</section>
