@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://terapiacomste.github.io',
-  base: '/steperassollo',
+  base: '/steperassollo/',
   integrations: [tailwind()],
   outDir: 'dist'
 });
